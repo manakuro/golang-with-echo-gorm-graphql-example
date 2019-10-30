@@ -1,0 +1,20 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: golang-with-echo-gorm-graphql-example
+  path: .
+  commands:
+    run:
+      status: true
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    ignore:
+      paths:
+      - .git
+      - .realize
+      - vendor

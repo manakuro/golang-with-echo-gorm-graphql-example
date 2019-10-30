@@ -1,0 +1,3 @@
+development:
+  driver: mysql
+  open: root:root@tcp(127.0.0.1:3306)/golang-with-echo-gorm-graphql-example_db
