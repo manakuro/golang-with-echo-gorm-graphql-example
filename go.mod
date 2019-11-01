@@ -4,9 +4,12 @@ go 1.13
 
 require (
 	bitbucket.org/liamstask/goose v0.0.0-20150115234039-8488cc47d90c // indirect
+	github.com/davecgh/go-spew v1.1.1
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/go-siris/siris v7.4.0+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.4.1
+	github.com/graphql-go/graphql v0.7.8
+	github.com/graphql-go/handler v0.2.3
 	github.com/jinzhu/gorm v1.9.11
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect

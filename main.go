@@ -2,6 +2,7 @@ package main
 
 import (
 	"golang-with-echo-gorm-graphql-example/datastore"
+	"golang-with-echo-gorm-graphql-example/graphql"
 	"golang-with-echo-gorm-graphql-example/handler"
 	"log"
 
@@ -17,12 +18,14 @@ func main() {
 	defer db.Close()
 
 	e := echo.New()
-
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
-
 	e.GET("/", handler.Welcome())
-	e.GET("/users", handler.GetUsers(db))
+
+	// graphql
+	h, err := graphql.NewHandler(db)
+	logFatal(err)
+	e.POST("/graphql", echo.WrapHandler(h))
 
 	err = e.Start(":3000")
 	logFatal(err)
