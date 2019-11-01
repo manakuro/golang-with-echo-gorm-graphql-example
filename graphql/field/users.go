@@ -3,9 +3,8 @@ package field
 import (
 	"golang-with-echo-gorm-graphql-example/domain/model"
 
-	"github.com/jinzhu/gorm"
-
 	"github.com/graphql-go/graphql"
+	"github.com/jinzhu/gorm"
 )
 
 var user = graphql.NewObject(
